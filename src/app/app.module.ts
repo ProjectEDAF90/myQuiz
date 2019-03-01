@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FrontPageComponent } from './front-page/front-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,
