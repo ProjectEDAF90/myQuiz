@@ -8,7 +8,7 @@ import { User } from "../user";
 })
 export class FrontPageComponent implements OnInit {
   user: User = {
-    id: 1,
+    // id: 1,
     name: ""
   };
   constructor() {}
