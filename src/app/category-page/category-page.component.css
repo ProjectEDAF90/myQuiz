@@ -1,0 +1,22 @@
+.category {
+    border: solid;
+    background-color: white;
+    border-color: #2196F3;
+    color: dodgerblue;
+    padding: 14px 28px;
+    margin: 5px;
+    font-size: 100%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+    width: 40%;
+    height: 200px;
+    border-radius:8px
+  }
+  
+  .category:hover {
+    background-color: #2196F3;
+    color: white;
+    opacity: 1;
+  }
