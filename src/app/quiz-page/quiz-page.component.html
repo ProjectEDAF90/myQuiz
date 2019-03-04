@@ -1,5 +1,10 @@
 
   <div class = "quizpage">
-    <button class = "start"  >Start quiz</button>
     <button class =  "back" routerLink = "/categories">Change category</button>
   </div>
+
+  <ul>
+    <li *ngFor = "let data of data$">
+      <a routerLink = "/categories">{{hello}}</a>
+    </li>
+  </ul>
