@@ -1,10 +1,10 @@
-<h2>Nickname: {{ user.name }}</h2>
+<h2>Username: {{ user.name }}</h2>
 <!-- <div><span>id: </span>{{ user.id }}</div> -->
-<div>
-  <label
-    >Enter your username:
-    <input [(ngModel)]="user.name" placeholder="username" />
+<div align="center">
+  <label>
+    <input class="input" [(ngModel)]="user.name" placeholder="Username" />
   </label>
+  <button class="frontPageButton">Start quizing!</button>
 </div>
 
 <!-- <div class="category-page">
