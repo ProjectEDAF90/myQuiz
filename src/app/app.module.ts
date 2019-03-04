@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FrontPageComponent } from "./front-page/front-page.component";
 import { RouterModule, Routes } from "@angular/router";
 import { CategoryPageComponent } from "./category-page/category-page.component";
+import { QuizPageComponent } from './quiz-page/quiz-page.component';
 
 @NgModule({
-  declarations: [AppComponent, FrontPageComponent, CategoryPageComponent],
+  declarations: [AppComponent, FrontPageComponent, CategoryPageComponent, QuizPageComponent],
 
   imports: [
     BrowserModule,
