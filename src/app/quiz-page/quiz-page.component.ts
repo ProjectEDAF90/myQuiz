@@ -12,20 +12,14 @@ export class QuizPageComponent implements OnInit, OnDestroy {
   private subsc;
   data$: any;
 
-  constructor(private data: DataService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.subsc = this.data.getQuestions().subscribe(
-      data => { console.log(JSON.stringify(data)); this.data$ = data['results']; }
-    )
-    console.log("hej")
+  
   }
 
   ngOnDestroy(): void {
-    if (this.subsc) {
-      this.subsc.unsubscribe();
-      this.subsc = null;
-    }
+
   }
 
 }

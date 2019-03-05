@@ -6,9 +6,10 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DataService {
 
+  private url = 'https://opentdb.com/api.php?amount=10&category=9&type=boolean'
   constructor(private http: HttpClient) { }
 
-  getQuestions() {
-    return this.http.get('https://opentdb.com/api.php?amount=15&category=15&fbclid=IwAR3-ZSL1Gxuo1xTjmfCeH0tNwVVb_8MuYSucPg16JjxVJtHKOOLFKpb1bdE')
+  getData() {
+    return this.http.get(this.url);
   }
 }

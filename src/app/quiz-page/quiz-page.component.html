@@ -2,12 +2,4 @@
   <div class = "quizpage">
     <button class =  "back" routerLink = "/categories">Change category</button>
   </div>
-
-  <ul>
-    <li *ngFor = "let data of data$">
-      <a routerLink = "/categories">{{data.question}}</a>
-    </li>
-  </ul>
-
-  {{data$}}
-  hepp
+  <app-questions></app-questions>
