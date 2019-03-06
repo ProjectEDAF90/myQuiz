@@ -43,7 +43,6 @@ const EXAMPLE_DATA: ResultPageItem[] = [
   { id: 29, name: "Jpeg", score: 2 },
   { id: 30, name: "Dr Solve", score: 0 },
   { id: 31, name: "Willebus", score: 0 }
-
 ];
 
 /**
@@ -75,17 +74,11 @@ export class ResultPageDataSource extends DataSource<ResultPageItem> {
     // Set the paginator's length
     this.paginator.length = this.data.length;
 
-<<<<<<< HEAD
     return merge(...dataMutations).pipe(
       map(() => {
         return this.getPagedData(this.getSortedData([...this.data]));
       })
     );
-=======
-    return merge(...dataMutations).pipe(map(() => {
-      return this.getPagedData(this.getSortedData([...this.data]));
-    }));
->>>>>>> 92edb30b256fc9950740b56f4a78e66d48605acb
   }
 
   /**
@@ -108,16 +101,11 @@ export class ResultPageDataSource extends DataSource<ResultPageItem> {
    * this would be replaced by requesting the appropriate data from the server.
    */
   private getSortedData(data: ResultPageItem[]) {
-<<<<<<< HEAD
     if (!this.sort.active || this.sort.direction === "") {
-=======
-    if (!this.sort.active || this.sort.direction === '') {
->>>>>>> 92edb30b256fc9950740b56f4a78e66d48605acb
       return data;
     }
 
     return data.sort((a, b) => {
-<<<<<<< HEAD
       const isAsc = this.sort.direction === "asc";
       switch (this.sort.active) {
         case "name":
@@ -128,13 +116,6 @@ export class ResultPageDataSource extends DataSource<ResultPageItem> {
           return compare(+a.score, +b.score, isAsc);
         default:
           return 0;
-=======
-      const isAsc = this.sort.direction === 'asc';
-      switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
-        default: return 0;
->>>>>>> 92edb30b256fc9950740b56f4a78e66d48605acb
       }
     });
   }
