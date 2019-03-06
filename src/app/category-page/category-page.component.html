@@ -1,9 +1,10 @@
 <h3>Please choose a category below to start your quizing experience! </h3>
+
 <div class="category-page">
   <div layout="coloumn">
-    <button class="category" routerLink = "/quiz" >Category 1 </button>
-    <button class="category" routerLink = "/quiz" >Category 2</button>
-    <button class="category" routerLink = "/quiz" >Category 3</button>
-    <button class="category" routerLink = "/quiz" >Category 4</button>
+    <button class="category" value ="1" routerLink = "/questions" (click) = "setChoice(1)" >General knowledge</button>
+    <button class="category" value ="2" routerLink = "/questions" (click) = "setChoice(2)">Science: Computers</button>
+    <button class="category" value ="3" routerLink = "/questions" (click) = "setChoice(3)">Science: Mathematics</button>
+    <button class="category" value ="4" routerLink = "/questions" (click) = "setChoice(4)">Geography</button>
   </div>
 </div>
