@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { QuizPageComponent } from './quiz-page/quiz-page.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryPageComponent,
     QuizPageComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
