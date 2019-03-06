@@ -16,9 +16,10 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   answer: any = [];
   counter = 0;
   result = 0;
+  highlight = null;
+
 
   constructor(private data: DataService, private cdRef: ChangeDetectorRef) { }
-
 
 
   ngOnInit() {
@@ -41,7 +42,9 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   checkAnswer(answer: String) {
     if (answer === this.answer[this.counter]) {
       this.result++;
-      
+      this.highlight = 1;
+    } else {
+      this.highlight = 0;
     }
   }
 
@@ -49,6 +52,15 @@ export class QuestionsComponent implements OnInit, OnDestroy {
     this.counter++;
   }
 
+  showResult() {
+    if (this.counter === 10) {
+      this.question = [],
+      this.answer= [],
+      this.counter = 0
+      this.result = 0;
+      this.highlight = null;
+    }
+  }
 
   ngOnDestroy(): void {
     if (this.subsc) {

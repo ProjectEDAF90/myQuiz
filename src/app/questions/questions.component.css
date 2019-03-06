@@ -1,4 +1,25 @@
+
 .ansbttn {
+    border: solid;
+    background-color: white;
+    border-color: #2196F3;
+    color: dodgerblue;
+    margin: 10px;
+    padding: 14px 28px;
+    font-size: 100%;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border-radius:8px;
+    transition: 0.2s;
+  }
+
+  .ansbttn:hover {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .leaderboard {
     border: solid;
     background-color: white;
     border-color: #2196F3;
@@ -9,6 +30,14 @@
     text-align: center;
     cursor: pointer;
     display: inline-block;
-    border-radius:8px
+    border-radius:8px;  
+    transition: 0.2;
   }
 
+  .leaderboard:hover {
+    background-color: #2196F3;
+    color: white;
+  }
+
+
+  
