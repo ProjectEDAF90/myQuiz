@@ -5,7 +5,6 @@ import { FormsModule } from "@angular/forms"; // <-- NgModel lives here
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FrontPageComponent } from "./front-page/front-page.component";
 import { RouterModule, Routes } from "@angular/router";
 import { CategoryPageComponent } from "./category-page/category-page.component";
 import { ResultPageComponent } from "./result-page/result-page.component";
@@ -20,8 +19,8 @@ import { QuestionsComponent } from "./questions/questions.component";
 @NgModule({
   declarations: [
     AppComponent,
-    FrontPageComponent,
     CategoryPageComponent,
+    QuestionsComponent,
     ResultPageComponent
   ],
 
@@ -30,6 +29,7 @@ import { QuestionsComponent } from "./questions/questions.component";
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule,
 
     MatTableModule,
     MatPaginatorModule,
