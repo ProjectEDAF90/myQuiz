@@ -1,0 +1,14 @@
+<div class = "center">
+
+  <div>
+    <p>{{generateQuestion()}}</p>
+    <button class="ansbttn" value="True" (click)="nextQuestion(); checkAnswer('True')">True</button>
+    <button class="ansbttn" value="False" (click)="nextQuestion(); checkAnswer('False')">False</button>
+  </div>
+
+
+  <div>
+    <p>Your score: {{result}} </p>
+    <button class="leaderboard">Show leaderboard</button>
+  </div>
+</div>

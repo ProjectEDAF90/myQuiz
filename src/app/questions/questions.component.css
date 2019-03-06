@@ -1,26 +1,25 @@
-.start {
+
+.ansbttn {
     border: solid;
     background-color: white;
     border-color: #2196F3;
     color: dodgerblue;
+    margin: 10px;
     padding: 14px 28px;
-    margin: 5px;
     font-size: 100%;
     text-align: center;
     cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
     display: inline-block;
-    border-radius:8px
-  }
-  
-  .start:hover {
-    background-color: #2196F3;
-    color: white;
-    opacity: 1;
+    border-radius:8px;
+    transition: 0.2s;
   }
 
-  .back {
+  .ansbttn:hover {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .leaderboard {
     border: solid;
     background-color: white;
     border-color: #2196F3;
@@ -30,14 +29,15 @@
     font-size: 100%;
     text-align: center;
     cursor: pointer;
-    opacity: 0.6;
-    transition: 0.2s;
     display: inline-block;
-    border-radius:8px
+    border-radius:8px;  
+    transition: 0.2;
   }
-  
-  .back:hover {
+
+  .leaderboard:hover {
     background-color: #2196F3;
     color: white;
-    opacity: 1;
   }
+
+
+  
