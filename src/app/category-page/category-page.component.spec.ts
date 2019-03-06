@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {MatButtonModule} from '@angular/material/button';
-import { CategoryPageComponent } from './category-page.component';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatButtonModule } from "@angular/material/button";
+import { CategoryPageComponent } from "./category-page.component";
 
-describe('CategoryPageComponent', () => {
+describe("CategoryPageComponent", () => {
   let component: CategoryPageComponent;
   let fixture: ComponentFixture<CategoryPageComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoryPageComponent ]
-    })
-    .compileComponents();
+      declarations: [CategoryPageComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('CategoryPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
