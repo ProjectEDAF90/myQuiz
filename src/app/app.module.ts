@@ -5,15 +5,23 @@ import { FormsModule } from "@angular/forms"; // <-- NgModel lives here
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { FrontPageComponent } from "./front-page/front-page.component";
 import { RouterModule, Routes } from "@angular/router";
 import { CategoryPageComponent } from "./category-page/category-page.component";
-import { QuizPageComponent } from './quiz-page/quiz-page.component';
-import { ResultPageComponent } from './result-page/result-page.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { QuizPageComponent } from "./quiz-page/quiz-page.component";
+import { ResultPageComponent } from "./result-page/result-page.component";
+import {
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule
+} from "@angular/material";
 
 @NgModule({
-  declarations: [AppComponent, FrontPageComponent, CategoryPageComponent, QuizPageComponent, ResultPageComponent],
+  declarations: [
+    AppComponent,
+    CategoryPageComponent,
+    QuizPageComponent,
+    ResultPageComponent
+  ],
 
   imports: [
     BrowserModule,
