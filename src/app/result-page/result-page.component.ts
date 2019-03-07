@@ -12,8 +12,11 @@ export class ResultPageComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   dataSource: ResultPageDataSource;
 
+  users: any = [];
+
+
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ["id", "name", "score"];
+  displayedColumns = ["Name", "Score", "Category"];
 
   ngOnInit() {
     this.dataSource = new ResultPageDataSource(this.paginator, this.sort);

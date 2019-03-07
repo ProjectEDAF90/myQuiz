@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button'
 import { DataService } from '../data.service';
+import {User} from '../user';
+import { StartPageComponent } from '../start-page/start-page.component';
 
 
 
@@ -11,12 +13,14 @@ import { DataService } from '../data.service';
 })
 export class CategoryPageComponent implements OnInit {
 
-
-  constructor(private data: DataService) { }
+  constructor(private data: DataService , private userdata: StartPageComponent) { }
 
   setChoice(choice: any) {
     this.data.setChoice(choice);
+    this.userdata.setCategory(choice);
   }
+  
+
 
   ngOnInit() {
   }

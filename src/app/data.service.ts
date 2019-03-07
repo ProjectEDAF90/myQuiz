@@ -19,16 +19,16 @@ export class DataService {
   }
 
   getData() {
-    if (this.choice === 1) {
+    if (this.choice === "GeneralKnowledge") {
       return this.http.get(this.GeneralKnowledge);
     }
-    if (this.choice === 2) {
+    if (this.choice === "ScienceComputers") {
       return this.http.get(this.ScienceComputers);
     }
-    if (this.choice === 3) {
+    if (this.choice === "ScienceMath") {
       return this.http.get(this.ScienceMath);
     }
-    if (this.choice === 4) {
+    if (this.choice === "Geography") {
       return this.http.get(this.Geography);
     }
   }
