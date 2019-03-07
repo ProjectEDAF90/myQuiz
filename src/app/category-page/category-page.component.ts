@@ -13,11 +13,10 @@ import { StartPageComponent } from '../start-page/start-page.component';
 })
 export class CategoryPageComponent implements OnInit {
 
-  constructor(private data: DataService , private userdata: StartPageComponent) { }
+  constructor(private data: DataService) { }
 
   setChoice(choice: any) {
     this.data.setChoice(choice);
-    this.userdata.setCategory(choice);
   }
   
 

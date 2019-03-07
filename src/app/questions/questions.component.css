@@ -1,9 +1,9 @@
 
 .ansbttn {
     border: solid;
-    background-color: white;
-    border-color: #2196F3;
-    color: dodgerblue;
+    background-color:transparent;
+    border-color: white;
+    color: white;
     margin: 10px;
     padding: 14px 28px;
     font-size: 100%;
@@ -21,9 +21,9 @@
 
   .leaderboard {
     border: solid;
-    background-color: white;
-    border-color: #2196F3;
-    color: dodgerblue;
+    background-color: transparent;
+    border-color: white;
+    color: white;
     padding: 14px 28px;
     margin: 5px;
     font-size: 100%;
