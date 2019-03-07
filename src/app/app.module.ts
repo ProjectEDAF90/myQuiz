@@ -15,6 +15,7 @@ import {
 } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { QuestionsComponent } from "./questions/questions.component";
+import { StartPageComponent } from './start-page/start-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { QuestionsComponent } from "./questions/questions.component";
     CategoryPageComponent,
     QuestionsComponent,
     ResultPageComponent,
+    StartPageComponent,
   ],
 
   imports: [
