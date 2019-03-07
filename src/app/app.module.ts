@@ -21,7 +21,7 @@ import { QuestionsComponent } from "./questions/questions.component";
     AppComponent,
     CategoryPageComponent,
     QuestionsComponent,
-    ResultPageComponent
+    ResultPageComponent,
   ],
 
   imports: [
