@@ -19,6 +19,10 @@
     color: white;
   }
 
+  .text {
+    color: white;
+  }
+
   .leaderboard {
     border: solid;
     background-color: transparent;
