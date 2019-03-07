@@ -5,12 +5,12 @@ import { ResultPageComponent } from "./result-page/result-page.component";
 import { QuestionsComponent } from './questions/questions.component';
 const routes: Routes = [
   {
-    path: "questions",
-    component: QuestionsComponent
-  },
-  {
     path: "categories",
     component: CategoryPageComponent
+  },
+  {
+    path: "questions",
+    component: QuestionsComponent
   },
   {
     path: "result",
