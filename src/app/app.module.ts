@@ -14,7 +14,8 @@ import {
 } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { QuestionsComponent } from "./questions/questions.component";
-import { ResultPageComponent } from "./result-page/result-page.component";
+import { StartPageComponent } from './start-page/start-page.component';
+import { ResultPageComponent } from './result-page/result-page.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ResultPageComponent } from "./result-page/result-page.component";
     AppComponent,
     CategoryPageComponent,
     QuestionsComponent,
-    ResultPageComponent
+    ResultPageComponent,
+    StartPageComponent,
   ],
 
   imports: [
