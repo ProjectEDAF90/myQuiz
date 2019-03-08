@@ -16,6 +16,8 @@ import {
 import { HttpClientModule } from "@angular/common/http";
 import { QuestionsComponent } from "./questions/questions.component";
 import { StartPageComponent } from './start-page/start-page.component';
+import { AngularWebStorageModule } from 'angular-web-storage';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { StartPageComponent } from './start-page/start-page.component';
     QuestionsComponent,
     ResultPageComponent,
     StartPageComponent,
+    UserComponent,
   ],
 
   imports: [
@@ -36,7 +39,8 @@ import { StartPageComponent } from './start-page/start-page.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularWebStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
