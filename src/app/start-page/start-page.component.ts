@@ -15,11 +15,6 @@ export class StartPageComponent implements OnInit {
 
   constructor() { }
 
-/*   setCategory(category: any) {
-    this.user.category = category;
-    console.log(this.user.category);
-  } */
-
   ngOnInit() {
     
   }

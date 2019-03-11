@@ -1,40 +1,45 @@
 .start {
     border: solid;
-    background-color: white;
-    border-color: #2196f3;
-    color: dodgerblue;
+    background-color: transparent;
+    border-color: white;
+    color: white;
     padding: 14px 28px;
     margin: 5px;
     font-size: 100%;
     text-align: center;
     cursor: pointer;
-    opacity: 0.6;
     transition: 0.2s;
     /* width: 40%;
     height: 200px; */
     display: inline-block;
     border-radius: 8px;
   }
+
+  .title {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 5em;
+    line-height: 1em;
+    font-weight: 100;
+  }
   
   .start:hover {
     background-color: #2196f3;
     color: white;
-    opacity: 1;
+    transform: scale(1.05);
   }
   .input {
     border: solid;
-    background-color: white;
-    border-color: #2196f3;
-    color: dodgerblue;
+    background-color: transparent;
+    border-color: white;
+    color: white;
     padding: 14px 28px;
     margin: 5px;
     font-size: 100%;
     text-align: center;
-    /* cursor: pointer; */
-    opacity: 0.6;
+
     transition: 0.2s;
-    /* width: 40%;
-      height: 200px; */
+
     display: inline-block;
     border-radius: 8px;
   }

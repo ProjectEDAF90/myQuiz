@@ -1,14 +1,14 @@
 <body>
-  <br>
-  <br>
-  <h3 class="a">Please choose a category below :) </h3>
-  <br>
-  <br>
-    <button class="category" value="1" routerLink="/questions" (click)="setChoice('GeneralKnowledge')">General
+
+  <h3 class="a">Choose a category below to get started! </h3>
+
+  <div class = "b"> <button class="category" value="1" routerLink="/questions" (click)="setChoice('GeneralKnowledge')">General
       knowledge</button>
     <button class="category" value="2" routerLink="/questions" (click)="setChoice('ScienceComputers')">Science:
       Computers</button>
     <button class="category" value="3" routerLink="/questions" (click)="setChoice('ScienceMath')">Science:
       Mathematics</button>
     <button class="category" value="4" routerLink="/questions" (click)="setChoice('Geography')">Geography</button>
+  </div>
+
 </body>

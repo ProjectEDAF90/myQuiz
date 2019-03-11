@@ -6,9 +6,8 @@
     color: white;
     margin: 10px;
     padding: 14px 28px;
-    font-size: 100%;
+    font-size: 120%;
     text-align: center;
-    cursor: pointer;
     display: inline-block;
     border-radius:8px;
     transition: 0.2s;
@@ -17,10 +16,27 @@
   .ansbttn:hover {
     background-color: #2196F3;
     color: white;
+    transform: scale(1.1);
   }
 
   .text {
+    margin-top: 10%;
+    margin-bottom: 5%;
     color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 100;
+  }
+
+  .result {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: 100;
   }
 
   .leaderboard {
@@ -32,7 +48,6 @@
     margin: 5px;
     font-size: 100%;
     text-align: center;
-    cursor: pointer;
     display: inline-block;
     border-radius:8px;  
     transition: 0.2;
