@@ -11,13 +11,13 @@ import { ResultPageComponent } from "./result-page/result-page.component";
 import {
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatFormFieldModule
 } from "@angular/material";
 import { HttpClientModule } from "@angular/common/http";
 import { QuestionsComponent } from "./questions/questions.component";
 import { StartPageComponent } from './start-page/start-page.component';
 import { AngularWebStorageModule } from 'angular-web-storage';
-import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { UserComponent } from './user/user.component';
     QuestionsComponent,
     ResultPageComponent,
     StartPageComponent,
-    UserComponent,
   ],
 
   imports: [
@@ -35,7 +34,7 @@ import { UserComponent } from './user/user.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule,
-
+    MatFormFieldModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
@@ -45,4 +44,4 @@ import { UserComponent } from './user/user.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

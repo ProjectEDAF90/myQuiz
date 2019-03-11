@@ -18,6 +18,7 @@ export class ResultPageComponent implements OnInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ["Name", "Score", "Category"];
 
+  
   ngOnInit() {
     this.dataSource = new ResultPageDataSource(this.paginator, this.sort);
   }

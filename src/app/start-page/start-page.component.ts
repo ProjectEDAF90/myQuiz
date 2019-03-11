@@ -1,4 +1,6 @@
-import { Component, Input,   OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { UserService } from '../user.service';
+
 
 @Component({
   selector: 'app-start-page',
@@ -7,13 +9,17 @@ import { Component, Input,   OnInit } from '@angular/core';
 })
 export class StartPageComponent implements OnInit {
  
-
-  constructor() {
-    
-  }
   
+  constructor(private user: UserService) {
+
+  }
+
+  setName(name: any) {
+    this.user.setName(name);
+  }
+
   ngOnInit() {
-    
+
   }
 
 }

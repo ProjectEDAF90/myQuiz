@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../data.service';
-import { ChangeDetectorRef } from '@angular/core';
+import { UserService } from '../user.service';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   highlight = null;
 
 
-  constructor(private data: DataService, private cdRef: ChangeDetectorRef) { }
+  constructor(private data: DataService, private user: UserService) { }
 
 
   ngOnInit() {
@@ -41,9 +41,6 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   checkAnswer(answer: String) {
     if (answer === this.answer[this.counter]) {
       this.result++;
-      this.highlight = 1;
-    } else {
-      this.highlight = 0;
     }
   }
 
@@ -53,12 +50,17 @@ export class QuestionsComponent implements OnInit, OnDestroy {
 
   showResult() {
     if (this.counter === 10) {
-      this.question = [],
-      this.answer= [],
-      this.counter = 0
-      this.result = 0;
-      this.highlight = null;
+      this.user.setScore(this.result);
+      return "You scored: " + this.result + "/10, well done!"
     }
+  }
+
+  reset() {
+    this.question = [],
+    this.answer = [],
+    this.counter = 0
+    this.result = 0;
+    this.highlight = null;
   }
 
   ngOnDestroy(): void {

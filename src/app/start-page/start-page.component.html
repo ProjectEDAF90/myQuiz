@@ -1,7 +1,7 @@
 <div>
 <h1>MyQuiz</h1>
   <label>
-    <input class="input" [(ngModel)]="user.name" placeholder="Username" />
+    <input class="input" [(ngModel)]="name"   placeholder="Username" />
   </label>
-  <button class="start" (click) = "print()" routerLink = "/categories">Start quizing!</button>
+  <button class="start" (click) = "setName(name)" routerLink = "/categories" >Start quizing!</button>
 </div>
