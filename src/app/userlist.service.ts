@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 import { Subject } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -19,9 +18,8 @@ export class UserListService {
   }
 
   addUser(user) {
-    this.userlist = [...this.userlist, {...user}];
+    this.userlist = [...this.userlist, { ...user }];
     this.source.next(this.userlist);
-    this.saveData();
   }
 
   sort() {
@@ -29,22 +27,8 @@ export class UserListService {
       this.userlist.sort(function (a, b) {
         return (b.score - a.score);
       })
-      
+
     }
-  }
-
-  loadData() {
-    let localStorageItem = JSON.parse(localStorage.getItem('users'));
-    if (localStorageItem != null) {
-      return JSON.parse(localStorage.getItem('users'));    
-    }
-    return null;  
-  }
-
-
-
-  saveData() {
-    localStorage.setItem('users', JSON.stringify(this.userlist));
   }
 
   getData(): Observable<any[]> {

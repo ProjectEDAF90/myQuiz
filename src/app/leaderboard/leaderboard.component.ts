@@ -14,16 +14,13 @@ export class LeaderboardComponent implements OnInit, OnDestroy {
 
   constructor(private userlist: UserListService) { }
 
-
-  
-
-
   ngOnInit() {
+
     this.userlist.sort();
     this.subsc = this.userlist.getData().subscribe(
       data => { this.input = data; }
     )
-    this.userlist.loadData();
+
   }
 
   ngOnDestroy(): void {
