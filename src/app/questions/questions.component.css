@@ -16,10 +16,17 @@
   .ansbttn:hover {
     background-color: #2196F3;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
+  }
+
+  .textbox {
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .text {
+    text-align: center;
+    height: 80px;
     margin-top: 10%;
     margin-bottom: 5%;
     color: white;

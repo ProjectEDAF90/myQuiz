@@ -14,7 +14,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  setChoice(choice: any) {
+  setChoice(choice: any) { 
     this.choice = choice;
   }
 

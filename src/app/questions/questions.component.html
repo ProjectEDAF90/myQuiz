@@ -1,14 +1,11 @@
-<div class = "center">
+<div class = "textbox">
+  <p class="text">{{generateQuestion()}}{{showResult()}}</p>
+</div>
 
+<div>
+  <button class="ansbttn" value="True" (click)="nextQuestion(); checkAnswer('True')">True</button>
+  <button class="ansbttn" value="False" (click)="nextQuestion(); checkAnswer('False')">False</button>
   <div>
-    <p class = "text">{{generateQuestion()}}</p>
-    <button class="ansbttn" value="True" (click)="nextQuestion(); checkAnswer('True')">True</button>
-    <button class="ansbttn" value="False" (click)="nextQuestion(); checkAnswer('False')">False</button>
-  </div>
-
-
-  <div>
-    <p class = "result">Your score: {{result}} </p>
-    <button class="leaderboard" routerLink = "/result">Show leaderboard</button>
+    <button class="leaderboard" (click)="reset()" routerLink="/result">Show leaderboard</button>
   </div>
 </div>

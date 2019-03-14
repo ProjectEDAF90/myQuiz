@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService } from '../data.service';
-import { ChangeDetectorRef } from '@angular/core';
+import { UserService } from '../user.service';
+import { UserListService } from '../userlist.service';
+
 
 
 @Component({
@@ -15,16 +17,23 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   answer: any = [];
   counter = 0;
   result = 0;
-  highlight = null;
 
 
-  constructor(private data: DataService, private cdRef: ChangeDetectorRef) { }
+  constructor(private data: DataService, private user: UserService, private userlist: UserListService) { }
 
+
+  strReplace(s: any) {
+    var newStr = s.replace(/&quot;/g, '"');
+    var newStr2 = newStr.replace(/&#039;/g, "'");
+    var newStr3 = newStr2.replace(/&ocirc;/g, "ô");
+    return newStr3;
+  }
 
   ngOnInit() {
     this.subsc = this.data.getData().subscribe(
       data => { this.input = data['results']; this.loopQuestions(); }
     )
+    console.log()
   }
 
   loopQuestions() {
@@ -35,31 +44,41 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   }
 
   generateQuestion() {
-    return this.question[this.counter];
+    if (this.counter <= 9) {
+      return this.strReplace(this.question[this.counter]);
+    }
   }
 
   checkAnswer(answer: String) {
     if (answer === this.answer[this.counter]) {
       this.result++;
-      this.highlight = 1;
-    } else {
-      this.highlight = 0;
     }
   }
 
   nextQuestion() {
-    this.counter++;
+    if (this.counter <= 9) {
+      this.counter++;
+      console.log("nextQuestion print: " + this.counter);
+    }
   }
 
   showResult() {
     if (this.counter === 10) {
-      this.question = [],
-      this.answer= [],
-      this.counter = 0
-      this.result = 0;
-      this.highlight = null;
+      this.user.setScore(this.result);
+      return "You scored: " + this.result + "/10, well done!"
     }
   }
+
+  reset() {
+    this.userlist.addUser(this.user);
+/*     this.userlist.loadData();
+ */    console.log(this.userlist);
+    this.question = [],
+    this.answer = [],
+    this.counter = 0
+    this.result = 0;
+  }
+
 
   ngOnDestroy(): void {
     if (this.subsc) {

@@ -1,11 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
 html,
 body {
-  height: 100%;
   background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);}
 body {
   margin: 0;
-  font-family: Roboto, "Josefine Sans", sans-serif;
+  font-family: 'Roboto', sans-serif;
 
 }

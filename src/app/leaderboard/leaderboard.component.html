@@ -1,0 +1,34 @@
+<section>
+  <h1>Leaderboard</h1>
+  <div> 
+    <button class="startpage" routerLink = "/">Back to startpage</button>
+  </div>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Category</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table id="Results" cellpadding="0" cellspacing="0">
+      <tbody>
+        <tr *ngFor="let user of input">
+          <td>
+            {{user.name}}
+          </td>
+          <td>
+            {{user.score}}
+          </td>
+          <td>
+            {{user.category}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,7 +1,7 @@
-<div >
-    <h1 class = "title">MyQuiz</h1>
-  <label>
-    <input class="input" [(ngModel)]="user.name" placeholder="Username" />
-  </label>
-  <button class="start" routerLink = "/categories">Start quizing!</button>
-</div>
+<div class = "startpage">
+  <h1 class = "title">MyQuiz</h1>
+    <label>
+      <input class="input" [(ngModel)]="name"   placeholder="Username" />
+    </label>
+    <button class="start" (click) = "setName(name)" routerLink = "/categories" >Start quizing!</button>
+  </div>
