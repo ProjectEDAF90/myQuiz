@@ -26,14 +26,14 @@ export class QuestionsComponent implements OnInit, OnDestroy {
     var newStr = s.replace(/&quot;/g, '"');
     var newStr2 = newStr.replace(/&#039;/g, "'");
     var newStr3 = newStr2.replace(/&ocirc;/g, "ô");
-    return newStr3;
+    var newStr4 = newStr3.replace(/&Aring;/g, "å");
+    return newStr4;
   }
 
   ngOnInit() {
     this.subsc = this.data.getData().subscribe(
       data => { this.input = data['results']; this.loopQuestions(); }
     )
-    console.log()
   }
 
   loopQuestions() {
@@ -58,7 +58,6 @@ export class QuestionsComponent implements OnInit, OnDestroy {
   nextQuestion() {
     if (this.counter <= 9) {
       this.counter++;
-      console.log("nextQuestion print: " + this.counter);
     }
   }
 
@@ -71,8 +70,6 @@ export class QuestionsComponent implements OnInit, OnDestroy {
 
   reset() {
     this.userlist.addUser(this.user);
-/*     this.userlist.loadData();
- */    console.log(this.userlist);
     this.question = [],
     this.answer = [],
     this.counter = 0

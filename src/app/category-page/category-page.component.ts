@@ -17,7 +17,6 @@ export class CategoryPageComponent implements OnInit {
   setChoice(choice: any) {
     this.data.setChoice(choice);
     this.user.setCategory(choice);
-    console.log(this.user);
   }
 
   

@@ -20,7 +20,6 @@ export class LeaderboardComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.userlist.sort();
-    console.log(this.userlist);
     this.subsc = this.userlist.getData().subscribe(
       data => { this.input = data; }
     )

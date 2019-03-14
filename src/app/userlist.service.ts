@@ -14,7 +14,6 @@ export class UserListService {
   private source = new Subject<any[]>();
   public user$ = this.source.asObservable();
 
-  //this.loadData();
 
   constructor() {
   }
@@ -42,13 +41,7 @@ export class UserListService {
     return null;  
   }
 
-  /* if (localStorage.getItem('users') != null) {
-      var localStorageItem = JSON.parse(localStorage.getItem('users'));
-      console.log(localStorageItem);
-      this.userlist.push(localStorageItem.users                             );
-      return localStorageItem.users;
-    }
-    return null; */
+
 
   saveData() {
     localStorage.setItem('users', JSON.stringify(this.userlist));

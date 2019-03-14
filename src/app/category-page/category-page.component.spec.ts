@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { MatButtonModule } from "@angular/material/button";
 import { CategoryPageComponent } from "./category-page.component";
 
 describe("CategoryPageComponent", () => {
